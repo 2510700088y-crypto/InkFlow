@@ -1,0 +1,7 @@
+{
+  "name": "InkFlow AI Calligrapher",
+  "description": "An intelligent agent for calligraphers to generate and overlay artistic signatures onto fan photos.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

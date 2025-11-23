@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>墨韵 InkFlow - AI 书法代理</title>
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
+    <link rel="apple-touch-icon" href="/icon.svg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="InkFlow">
+    <meta name="theme-color" content="#fdfbf7">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: {
+                50: '#f6f6f6',
+                100: '#e7e7e7',
+                200: '#d1d1d1',
+                300: '#b0b0b0',
+                400: '#888888',
+                500: '#6d6d6d',
+                600: '#5d5d5d',
+                700: '#4f4f4f',
+                800: '#454545',
+                900: '#3d3d3d',
+                950: '#000000',
+              },
+              paper: '#fdfbf7',
+            },
+            fontFamily: {
+              serif: ['Times New Roman', 'STSong', 'SimSun', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Hide scrollbar for clean iPad look */
+      body {
+        background-color: #fdfbf7;
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Prevent text selection to feel more native */
+      .select-none {
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
